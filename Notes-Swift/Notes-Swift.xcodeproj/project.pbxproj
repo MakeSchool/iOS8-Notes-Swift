@@ -15,6 +15,7 @@
 		BC0AFF921A149CE5000BABEA /* NotesListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AFF911A149CE5000BABEA /* NotesListTableTableViewController.swift */; };
 		BC0AFF941A14FAF1000BABEA /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AFF931A14FAF1000BABEA /* Note.swift */; };
 		BC0AFF961A14FEF1000BABEA /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0AFF951A14FEF1000BABEA /* NoteDetailViewController.swift */; };
+		BC608EB61A151D82007253D8 /* NotesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC608EB51A151D82007253D8 /* NotesListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		BC0AFF911A149CE5000BABEA /* NotesListTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesListTableTableViewController.swift; sourceTree = "<group>"; };
 		BC0AFF931A14FAF1000BABEA /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		BC0AFF951A14FEF1000BABEA /* NoteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
+		BC608EB51A151D82007253D8 /* NotesListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				BC0AFF911A149CE5000BABEA /* NotesListTableTableViewController.swift */,
 				BC0AFF711A149B8F000BABEA /* AppDelegate.swift */,
 				BC0AFF751A149B8F000BABEA /* Main.storyboard */,
+				BC608EB51A151D82007253D8 /* NotesListTableViewCell.swift */,
 				BC0AFF931A14FAF1000BABEA /* Note.swift */,
 				BC0AFF781A149B8F000BABEA /* Images.xcassets */,
 				BC0AFF7A1A149B8F000BABEA /* LaunchScreen.xib */,
@@ -221,6 +224,7 @@
 				BC0AFF921A149CE5000BABEA /* NotesListTableTableViewController.swift in Sources */,
 				BC0AFF961A14FEF1000BABEA /* NoteDetailViewController.swift in Sources */,
 				BC0AFF721A149B8F000BABEA /* AppDelegate.swift in Sources */,
+				BC608EB61A151D82007253D8 /* NotesListTableViewCell.swift in Sources */,
 				BC0AFF941A14FAF1000BABEA /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +417,7 @@
 				BC0AFF8D1A149B8F000BABEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC0AFF8E1A149B8F000BABEA /* Build configuration list for PBXNativeTarget "Notes-SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				BC0AFF901A149B8F000BABEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
