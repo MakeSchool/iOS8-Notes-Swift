@@ -1,3 +1,5 @@
+There is an Objective-C version of this tutorial located [here](https://github.com/MakeGamesWithUs/iOS8-Notes).
+
 #Setting up a new project
 
 Open Xcode 6 and select *File -> New Project*. Then choose create a *Single View Application*:
