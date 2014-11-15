@@ -58,7 +58,7 @@ class NotesListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("NotesCell", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel!.text = notes[indexPath.row].title
+        cell.textLabel.text = notes[indexPath.row].title
         
         return cell
     }
