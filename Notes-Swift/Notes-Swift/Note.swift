@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import CoreData
 
-class Note {
-    var title = ""
-    var content = ""
+@objc(Note)
+class Note: NSManagedObject {
+    @NSManaged var title: String
+    @NSManaged var content: String
 }

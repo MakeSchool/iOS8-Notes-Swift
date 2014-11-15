@@ -28,6 +28,8 @@ class NoteDetailViewController: UIViewController {
         
         note.title = titleTextFied.text
         note.content = contentTextField.text
+        
+        CoreDataManager.sharedInstance.saveContext()
     }
     
 }
