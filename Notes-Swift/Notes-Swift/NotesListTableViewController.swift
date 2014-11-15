@@ -1,5 +1,5 @@
 //
-//  NotesListTableTableViewController.swift
+//  NotesListTableViewController.swift
 //  Notes-Swift
 //
 //  Created by Dion Larson on 11/13/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotesListTableTableViewController: UITableViewController {
+class NotesListTableViewController: UITableViewController {
     
     var notes: [Note] = []
     
