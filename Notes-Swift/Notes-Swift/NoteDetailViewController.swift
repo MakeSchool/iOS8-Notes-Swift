@@ -14,7 +14,7 @@ class NoteDetailViewController: UIViewController {
     @IBOutlet weak var titleTextFied: UITextField!
     @IBOutlet weak var contentTextField: UITextView!
     
-    var note = Note()
+    var note: Note!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
