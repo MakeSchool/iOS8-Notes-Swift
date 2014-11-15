@@ -269,7 +269,7 @@ Let's first create a custom class for our Detail View Controller, so that we can
 
 	class NoteDetailViewController: UIViewController {
 	
-	    var note = Note()
+	    var note: Note!
 	    
 	}
 	
