@@ -25,6 +25,8 @@ class NotesListTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        notes = CoreDataManager.sharedInstance.fetchNotes()
+        
         tableView.reloadData()
     }
     
@@ -34,7 +36,7 @@ class NotesListTableViewController: UITableViewController {
             var selectedIndexPath = tableView.indexPathForSelectedRow()
             noteDetailViewController.note = notes[selectedIndexPath!.row]
         } else if segue.identifier! == "addNote" {
-            var note = Note()
+            var note = CoreDataManager.sharedInstance.createNewNote()
             notes.append(note)
             var noteDetailViewController = segue.destinationViewController as NoteDetailViewController
             noteDetailViewController.note = note
@@ -64,7 +66,8 @@ class NotesListTableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        notes.removeAtIndex(indexPath.row)
+        var deletedNote = notes.removeAtIndex(indexPath.row)
+        CoreDataManager.sharedInstance.deleteNote(deletedNote)
         tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
     }
     
