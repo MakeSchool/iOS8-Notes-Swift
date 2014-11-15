@@ -22,7 +22,7 @@
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Note content goes here!" translatesAutoresizingMaskIntoConstraints="NO" id="pe7-rO-bek">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Note content goes here!" translatesAutoresizingMaskIntoConstraints="NO" id="pe7-rO-bek">
                                 <rect key="frame" x="16" y="114" width="568" height="478"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
@@ -59,38 +59,58 @@
         <scene sceneID="j5l-r1-KtZ">
             <objects>
                 <tableViewController id="xhB-YZ-AU0" customClass="NotesListTableViewController" customModule="Notes_Swift" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uCh-l1-0VK">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" id="uCh-l1-0VK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotesCell" rowHeight="88" id="dYK-iY-L8P" customClass="NotesListTableViewCell" customModule="Notes_Swift" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotesCell" id="dYK-iY-L8P" customClass="NotesListTableViewCell" customModule="Notes_Swift" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dYK-iY-L8P" id="WMF-Uj-7zS">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dA-rv-jlg">
-                                            <rect key="frame" x="18" y="38.5" width="564" height="35.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dA-rv-jlg" userLabel="PreviewLabel">
+                                            <rect key="frame" x="18" y="39" width="564" height="37"/>
                                             <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="74" translatesAutoresizingMaskIntoConstraints="NO" id="DEf-Rt-7Ig">
-                                            <rect key="frame" x="18" y="13" width="564" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="74" translatesAutoresizingMaskIntoConstraints="NO" id="DEf-Rt-7Ig" userLabel="TitleLabel">
+                                            <rect key="frame" x="18" y="13" width="564" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="07t-1Q-q55"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="DEf-Rt-7Ig" secondAttribute="trailing" constant="10" id="6mC-fB-bYz"/>
-                                        <constraint firstItem="DEf-Rt-7Ig" firstAttribute="top" secondItem="WMF-Uj-7zS" secondAttribute="topMargin" constant="4.5" id="IKy-cM-lis"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="2dA-rv-jlg" secondAttribute="bottom" constant="5" id="MV1-AI-jOj"/>
-                                        <constraint firstItem="2dA-rv-jlg" firstAttribute="top" secondItem="DEf-Rt-7Ig" secondAttribute="bottom" constant="5" id="evP-vU-ndm"/>
-                                        <constraint firstItem="2dA-rv-jlg" firstAttribute="leading" secondItem="WMF-Uj-7zS" secondAttribute="leadingMargin" constant="10" id="l1v-jX-cEF"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="2dA-rv-jlg" secondAttribute="trailing" constant="10" id="pUx-cd-SSi"/>
-                                        <constraint firstItem="DEf-Rt-7Ig" firstAttribute="leading" secondItem="WMF-Uj-7zS" secondAttribute="leadingMargin" constant="10" id="vnh-Uf-ilo"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2dA-rv-jlg" secondAttribute="bottom" constant="-39.5" id="2EI-2B-gHi"/>
+                                        <constraint firstItem="DEf-Rt-7Ig" firstAttribute="top" secondItem="WMF-Uj-7zS" secondAttribute="topMargin" constant="5" id="AKn-Jp-xqh"/>
+                                        <constraint firstItem="DEf-Rt-7Ig" firstAttribute="leading" secondItem="WMF-Uj-7zS" secondAttribute="leadingMargin" constant="10" id="C20-qS-wTc"/>
+                                        <constraint firstItem="2dA-rv-jlg" firstAttribute="centerX" secondItem="WMF-Uj-7zS" secondAttribute="centerX" id="C8Q-F5-ku9"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2dA-rv-jlg" secondAttribute="bottom" constant="3.5" id="H55-Qq-b6W"/>
+                                        <constraint firstItem="DEf-Rt-7Ig" firstAttribute="leading" secondItem="2dA-rv-jlg" secondAttribute="leading" id="XGv-uC-1Q9"/>
+                                        <constraint firstItem="2dA-rv-jlg" firstAttribute="trailing" secondItem="DEf-Rt-7Ig" secondAttribute="trailing" id="fBB-LI-T9c"/>
+                                        <constraint firstItem="DEf-Rt-7Ig" firstAttribute="centerX" secondItem="WMF-Uj-7zS" secondAttribute="centerX" id="hYg-he-df4"/>
+                                        <constraint firstItem="DEf-Rt-7Ig" firstAttribute="leading" secondItem="2dA-rv-jlg" secondAttribute="leading" id="ptL-oA-ngl"/>
+                                        <constraint firstItem="2dA-rv-jlg" firstAttribute="trailing" secondItem="DEf-Rt-7Ig" secondAttribute="trailing" id="sKE-ET-uC3"/>
+                                        <constraint firstItem="2dA-rv-jlg" firstAttribute="top" secondItem="DEf-Rt-7Ig" secondAttribute="bottom" constant="5" id="smQ-z1-TwK"/>
+                                        <constraint firstItem="2dA-rv-jlg" firstAttribute="top" secondItem="DEf-Rt-7Ig" secondAttribute="bottom" constant="5" id="t4B-YF-UM9"/>
+                                        <constraint firstItem="DEf-Rt-7Ig" firstAttribute="leading" secondItem="WMF-Uj-7zS" secondAttribute="leadingMargin" constant="10" id="wi2-jC-pqE"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="C20-qS-wTc"/>
+                                            <exclude reference="XGv-uC-1Q9"/>
+                                            <exclude reference="hYg-he-df4"/>
+                                            <exclude reference="2EI-2B-gHi"/>
+                                            <exclude reference="fBB-LI-T9c"/>
+                                            <exclude reference="smQ-z1-TwK"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="labelContentPreview" destination="2dA-rv-jlg" id="AbB-ol-Mf5"/>
@@ -112,6 +132,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btj-8o-BJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
