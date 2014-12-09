@@ -97,7 +97,7 @@ There are many more methods that are part of the protocol but the two mentioned 
 
 Now lets fill the table view with some placeholder content:
 
-- Remove the `numberOfSectionsInTableView` implementation from `NotesListTableViewController.m`. Because we want to use the default option (one section) we do not need to implement this method
+- Remove the `numberOfSectionsInTableView` implementation from `NotesListTableViewController.swift`. Because we want to use the default option (one section) we do not need to implement this method
 - Change the implementation of `tableView:numberOfRowsInSection:` to return 10, for now we want display 10 placeholder cells in our list:	
 
 		override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -293,7 +293,7 @@ Now we are successfully handing the note to the detail view controller - but we 
 
 ##Displaying a Note in the Detail View Controller
 
-We want to display the title of a note in the text field of the detail view controller and the content in the text view. To achieve that we need code connections to be able to change the content of our UI elements in code. Open the main storyboard and select the text field in the note detail view controller. Select the connections inspector in the right panel. This is the same tab that you used to trigger the segue from the table view cell to the detail view controller. Code connections that allow us to edit UI components from code are called *Referencing Outlets*. To create a code connection you need to switch to the *Assistant Editor* in the top right corner (red circle), that will allow you to display a interface file and code directly next to each other. Then you can drag the dot behind *New Referencing Outlet* into the *NoteDetailViewController.m* file. Note that you need to drop the line within the `@interface` block, because that is the only place where properties can be declared:
+We want to display the title of a note in the text field of the detail view controller and the content in the text view. To achieve that we need code connections to be able to change the content of our UI elements in code. Open the main storyboard and select the text field in the note detail view controller. Select the connections inspector in the right panel. This is the same tab that you used to trigger the segue from the table view cell to the detail view controller. Code connections that allow us to edit UI components from code are called *Referencing Outlets*. To create a code connection you need to switch to the *Assistant Editor* in the top right corner (red circle), that will allow you to display a interface file and code directly next to each other. Then you can drag the dot behind *New Referencing Outlet* into the *NoteDetailViewController.swift* file.
 
 ![image](instructionImages/IBOutlet1.png)
 
@@ -302,12 +302,12 @@ When you end dragging the line a property will be created and you will be prompt
 ![image](instructionImages/namingOutlet.png)
 
 Repeat the same for the text view and name the property `contentTextView`.
-Now we have two referencing outlets we can work with. Now we need an adequate place in code where we can display the currently selected note. A good method is `viewWillAppear:` which is called immediately before the view of a view controller is displayed. Add this implementation to *NoteDetailViewController.m*:
+Now we have two referencing outlets we can work with. Now we need an adequate place in code where we can display the currently selected note. A good method is `viewWillAppear:` which is called immediately before the view of a view controller is displayed. Add this implementation to *NoteDetailViewController.swift*:
 
 	override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        titleTextFied.text = note.title
+        titleTextField.text = note.title
         contentTextField.text = note.content
     }
 
@@ -323,7 +323,7 @@ For the purpose of our small app storing changes to notes can be implemented ver
 	override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        note.title = titleTextFied.text
+        note.title = titleTextField.text
         note.content = contentTextField.text
     }
 
@@ -333,7 +333,7 @@ Now you will see that changes are persisted correctly. When switching back and f
 
 The `UITableView` does not automatically refresh its content. In order to refresh the list we need to call `reloadData` on the table view (the `UITableViewController` calls `reloadData` once automatically when the table view is empty, that's why we only need to call it to refresh the table view content, not for the initial load).
 
-Once again a good place to trigger view updates is in the `viewWillAppear:` method. Add this method to *NotesListTableViewController.m*:
+Once again a good place to trigger view updates is in the `viewWillAppear:` method. Add this method to *NotesListTableViewController.swift*:
 
 	override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
