@@ -11,7 +11,7 @@ import UIKit
 class NoteDetailViewController: UIViewController {
 
     
-    @IBOutlet weak var titleTextFied: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextField: UITextView!
     
     var note: Note!
@@ -19,14 +19,14 @@ class NoteDetailViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        titleTextFied.text = note.title
+        titleTextField.text = note.title
         contentTextField.text = note.content
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        note.title = titleTextFied.text
+        note.title = titleTextField.text
         note.content = contentTextField.text
         
         CoreDataManager.sharedInstance.saveContext()

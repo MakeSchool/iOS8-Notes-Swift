@@ -1,4 +1,4 @@
-There is an Objective-C version of this tutorial located [here](https://github.com/MakeGamesWithUs/iOS8-Notes). This code was last tested on Xcode 6.1 (6A1052d). There may be errors in other versions of Xcode.
+There is an Objective-C version of this tutorial located [here](https://github.com/MakeGamesWithUs/iOS8-Notes). This code was last tested on Xcode 6.1.1 (6A2008a). There may be errors in other versions of Xcode.
 
 #Setting up a new project
 
@@ -110,7 +110,7 @@ Now lets fill the table view with some placeholder content:
 	    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 	        var cell = tableView.dequeueReusableCellWithIdentifier("NotesCell", forIndexPath: indexPath) as UITableViewCell
 	        
-	        cell.textLabel?.text = "Note"
+	        cell.textLabel!.text = "Note"
 	        
 	        return cell
 	    }
@@ -243,7 +243,7 @@ Now let's change the cell display code:
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("NotesCell", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel.text = notes[indexPath.row].title
+        cell.textLabel!.text = notes[indexPath.row].title
         
         return cell
     }
