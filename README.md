@@ -311,7 +311,6 @@ Now we have two referencing outlets we can work with. Now we need an adequate pl
         contentTextField.text = note.content
     }
 
-Additionally you need to import the `Note` class!
 Now you can test the app and you will see that selected notes are passed to the detail view controller and displayed there.
 
 You will maybe realize that changes to the notes that you make in the detail view aren't saved. When you switch back to the list view controller all changes to notes disappear. Luckily that is easily fixed.
