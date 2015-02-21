@@ -267,7 +267,11 @@ Now that our list can display real `Note` objects we should add that capability 
 - Pass a Note that we have selected from the list to the Detail View Controller
 - Enable the Detail View Controller to display the Note using the title text field and the content text view
 
-Let's first create a custom class for our Detail View Controller, so that we can add a `note` variable that can be set by the list view controller. Create a new class called `NoteDetailViewController` and make it a subclass of `UIViewController`. That class shall be able to store a `Note`, this is what it should look like:
+Let's first create a custom class for our Detail View Controller, so that we can add a `note` variable that can be set by the list view controller. Go to File -> New -> File -> iOS -> Source -> Cocoa Touch Class.  
+
+![image](instructionImages/NewFile.png)
+
+Name the new class `NoteDetailViewController` and make it a subclass of `UIViewController`. Make sure it is a Swift class, not an Objective-C one.  That class shall be able to store a `Note`, this is what it should look like:
 
 	import UIKit
 
