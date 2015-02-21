@@ -198,7 +198,11 @@ That is the power of Auto Layout.
 
 Now it's time to add some notes. Currently we are only displaying dummy data, that shall change in this step.
 
-Start of by creating a `Note` class. It should have the variables: `title` and `content`.
+Start off by creating a `Note` class. Go to File -> New -> File -> iOS -> Source -> Swift File
+
+![image](instructionImages/NewSwiftFile.png)
+
+It should have the variables: `title` and `content`.
 
 	class Note {
 		var title = ""
