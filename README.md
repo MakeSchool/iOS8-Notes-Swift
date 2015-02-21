@@ -116,7 +116,7 @@ Now lets fill the table view with some placeholder content:
 	    }
 		
 The `tableView:numberOfRowsInSection:` implementation is quickly explained, the table view wants to 
-now the amount of rows - for now we return 10 as a placeholder, later we will return the amount of notes we have stored in the App.
+know the amount of rows - for now we return 10 as a placeholder, later we will return the amount of notes we have stored in the App.
 
 The second method `tableView:cellForRowAtIndexPath:` is a little bit more complicated. To save memory a `UITableView` only keeps references to cells that are currently visible. Imagine how a list with 20 000 entries would impact memory and performance if the `UITableView` would create every cell upfront and keep a reference to it - dynamically allocating cells as they are needed is a better approach. Additionally the table view is designed to reuse cells that are no longer visible and to use them to display new content that has become visible - once again for performance reasons. This way a table view can use as little as 20 cells to display thousands of entries in a list.
 
