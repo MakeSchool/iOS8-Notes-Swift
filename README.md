@@ -301,7 +301,7 @@ When you end dragging the line a property will be created and you will be prompt
 
 ![image](instructionImages/namingOutlet.png)
 
-Repeat the same for the text view and name the property `contentTextView`.
+Repeat the same for the text view and name the property `contentTextField`.
 Now we have two referencing outlets we can work with. Now we need an adequate place in code where we can display the currently selected note. A good method is `viewWillAppear:` which is called immediately before the view of a view controller is displayed. Add this implementation to *NoteDetailViewController.swift*:
 
 	override func viewWillAppear(animated: Bool) {
