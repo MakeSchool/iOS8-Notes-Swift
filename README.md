@@ -374,7 +374,7 @@ Thinking about this you might realize that we now have two different segues that
 
 ![image](instructionImages/nameSegue.png)
 
-Choose "AddNote" as the identifier for the segue from the *+* button and "ShowNote" for the segue from the table view cell.
+Choose "addNote" as the identifier for the segue from the *+* button and "showNote" for the segue from the table view cell.
 Now we can identify the two different segues. Let's change the implementation of our `prepareForSegue(segue:, sender:)` method accordingly:
 
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
